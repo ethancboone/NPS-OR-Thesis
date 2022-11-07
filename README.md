@@ -1,42 +1,49 @@
-# NPS-OR-Thesis
-This is the code for my thesis to fulfill the requirements for my  M.S. Operations Research at the Naval Postgraduate School. The thesis is titled:
-> Using Supervised Machine Learning Methods to Identify Factors that Influence the Probability of Future Terrorist Attacks
+# Boone DIA DCTC Thesis
 
-The code in this repository contains only the information required to provide the predictions for one month ahead. Functions in this repository were used to migrate the thesis findings onto a dashboard to delivered to the project stakeholders. 
+## Description
+
+This repository hosts the code necessary to deploy the developed prediction model on the Shiny dashboard.
+
+## Badges
+
+On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
+
+## Visuals
+
+Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
 
 ## Installation
-There are no specific installation instructions for this project. The main executable is the deliverable.R file, which does everything from reading in the data to providing the one month ahead prediction. 
 
-## Project Goal 
-This project attempts to predict the number of violent events with fatalities in different areas of the world. Both classification and regression prediction models were developed.
+Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
 
-## Methodology
-### Data Selection 
-There were three main datasources for this project:
-- Global Terrorism Database (GTD)
-- Armed Conflict and Location Event Data (ACLED)
-- Global Database of Events, Language, and Tone (GDELT)
+## Usage
 
-The ACLED dataset was chosen for the thesis due to its weekly updates and overall cleanliness and usability of the data. 
+Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
 
-### Data Structure
-How the data was going to be structured was the first step in creating the prediction models. Outside of the administrative regions in the ACLED dataset, the next lowest resolution for the data was by country. A higher degree of resolution was desired, which led to the development of a grid structure to overlay on the globe.
+## Support
 
+Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
 
+## Roadmap
 
-The blowout of the grid in the image above shows the contents of each grid. This is what was ultimatly fed into the prediction models. 
+If you have ideas for releases in the future, it is a good idea to list them in the README.
 
-### Predictors 
-There were several open-source databases considered when collecting predictors. These included the World Bank and the Yale Geographically based Economic data (G-Econ). Feature engineering from the ACLED dataset was also conducted. 
+## Contributing
 
-### Predicion Models 
-Two main models were used in this thesis:
-- Generalized Autoregresive Network (GNAR) Model
-- Ensemble Model
+State if you are open to contributions and what your requirements are for accepting them.
 
-The GNAR model showed poor results across several models with varying parameters. This led the pivot to an ensemble model. The ensemble model consisted of two main parts: 
-- Time-series forecasting of predictors
-- Prediction Analysis
-  - Classification 
-  - Regression
+For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
 
+You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
+
+## Authors and acknowledgment
+
+Show your appreciation to those who have contributed to the project.
+
+## License
+
+For open source projects, say how it is licensed.
+
+## Project status
+
+If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
