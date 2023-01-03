@@ -1,0 +1,24 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Lucida Sans', sans-serif;
+}
+
+.grid {
+    border: solid black;
+    display: grid;
+    grid-column: 4;
+}
+
+
+@media only screen and (max-width: 600px){
+    [class*="box-"] {
+        background-color: aqua;
+        width: 100%;
+        border: solid beige;
+    }
+}

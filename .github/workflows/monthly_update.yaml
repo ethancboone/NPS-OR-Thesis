@@ -1,0 +1,33 @@
+name: monthlyPrediction
+
+on:
+  schedule: 
+  - cron: "0 0 1 * *"
+
+jobs:
+  runs-on: [macos-latest ubuntu-latest]
+
+  steps:
+  - uses: actions/checkout@master
+  - uses: r-lib/actions/setup-r@master
+
+  - name: Install Required Packages
+    run: |
+      R -e 'install.packages("dplyr")'
+      R -e 'install.packages("tidyr")'
+      R -e 'install.packages("lubridate")'
+      R -e 'install.packages("acled.api")'
+      R -e 'install.packages("hablar")'
+      R -e 'install.packages("data.table")'
+      R -e 'install.packages("docstring")'
+      R -e 'install.packages("ggplot2")'
+      R -e 'install.packages("tidyverse")'
+      R -e 'install.packages("tidyquant")'
+      R -e 'install.packages("timetk")'
+      R -e 'install.packages("sweep")'
+      R -e 'install.packages("forecast")'
+      R -e 'install.packages("randomForest")'
+      R -e 'install.packages("e1071")'
+      R -e 'install.packages("class")'
+      R -e 'install.packages("xgboost")'
+      R -e 'install.packages("caret")'
